@@ -10,7 +10,15 @@ namespace server
         public static IPAddress Adress { get; set; } = IPAddress.Any;
         public static int Port { get; set; } = 8080;
     }
-    class Program
+
+    class Status
+    {
+        public string Id { get; set; }
+        public string Time { get; set; }
+        public string Stat { get; set; }
+    }
+
+        class Program
     {
         public static void Main()
         {
