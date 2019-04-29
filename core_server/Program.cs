@@ -13,18 +13,8 @@ using config;
 
 namespace server
 {
-
-    class Status
-    {
-        public string Id { get; set; }
-        public string Time { get; set; }
-        public string Stat { get; set; }
-        public string Description { get; set; }
-    }
-
     class Program 
     {
-
         public static void Main()
         {
             string adress = Config.Adress;
