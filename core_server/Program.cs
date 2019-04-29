@@ -9,24 +9,20 @@ using System.Threading;
 using System.Text.RegularExpressions;
 using System.Security.Cryptography;
 using System.IO;
+using config;
 
 namespace server
 {
-    class Config
-    {
-        public static string Adress { get; set; } = "0.0.0.0";
-        public static int Port { get; set; } = 8080;
-        public static int Wait { get; set; } = 300;
-    }
 
     class Status
     {
         public string Id { get; set; }
         public string Time { get; set; }
         public string Stat { get; set; }
+        public string Description { get; set; }
     }
 
-    class Program
+    class Program 
     {
 
         public static void Main()
