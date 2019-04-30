@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +10,5 @@ namespace config
     {
         public static string Adress { get; set; } = "0.0.0.0";
         public static int Port { get; set; } = 8080;
-        public static int Wait { get; set; } = 300;
     }
 }
