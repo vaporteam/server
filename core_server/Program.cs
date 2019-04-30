@@ -67,6 +67,7 @@ namespace server
             {
                 // Obtain a request object.
                 HttpListenerRequest request = context.Request;
+                Console.WriteLine(request.Headers);
                 string body = GetRequestPostData(request);
                 Console.WriteLine(body);
                 // Obtain a response object.
