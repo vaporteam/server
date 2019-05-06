@@ -10,6 +10,9 @@ using System.Text.RegularExpressions;
 using System.Security.Cryptography;
 using System.IO;
 using config;
+using Common;
+using System.Reflection;
+using core_server.Properties;
 
 namespace server
 {
@@ -17,12 +20,12 @@ namespace server
     {
         public static void Main()
         {
-            string adress = Config.Adress;
+            string adress = Config.Server.Adress;
             if (adress == "0.0.0.0")
             {
                 adress = "*";
             }
-            string s = string.Format("http://{0}:{1}/", adress, Config.Port);
+            string s = string.Format("http://{0}:{1}/", adress, Config.Server.Port);
 
             SimpleListener(s);
 
@@ -73,8 +76,15 @@ namespace server
                 // Obtain a response object.
                 HttpListenerResponse response = context.Response;
                 // Construct a response.
-                string responseString = "<HTML><BODY> Hello world!</BODY></HTML>";
-                byte[] buffer = Encoding.UTF8.GetBytes(responseString);
+                byte[] buffer;
+                if (request.UserAgent == "Test_Tracker")
+                {
+                    string responseString = "Ok";
+                    buffer = Encoding.UTF8.GetBytes(responseString);
+                } else
+                {
+                    buffer = Encoding.UTF8.GetBytes(Resources.index);
+                }
                 // Get a response stream and write the response to it.
                 response.ContentLength64 = buffer.Length;
                 Stream output = response.OutputStream;
