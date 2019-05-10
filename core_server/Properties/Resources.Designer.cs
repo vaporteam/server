@@ -67,12 +67,21 @@ namespace core_server.Properties {
         ///&lt;head&gt;
         ///    &lt;meta charset=&quot;utf-8&quot; /&gt;
         ///    &lt;title&gt;&lt;/title&gt;
-        ///&lt;/head&gt;
-        ///&lt;body&gt;
-        ///    01001000111010011101001110000 01010100110010011100101110100 01011100011101010001000101111
-        ///    &lt;pre&gt;
-        ///         ___  ___  _________  _________  ________        _________  _______   ________  _________            ________          ___ 
-        ///|\  \|\  \|\___   ___|\___   ___|\   __  \      |\___   ___|\  ___ \ |\   ____\|\___   ___\      ___|\   ___ \        /  /| [resto de la cadena truncado]&quot;;.
+        ///    &lt;style&gt;
+        ///        h1 { 
+        ///            font-family: monospace; 
+        ///            font-size: 23px; 
+        ///            font-style: normal; 
+        ///            font-variant: normal; 
+        ///            font-weight: 700; 
+        ///            line-height: 23px; 
+        ///
+        ///        } 
+        ///        h3 { 
+        ///            font-family: monospace; 
+        ///            font-size: 17px; 
+        ///            font-style: normal; 
+        ///            fon [resto de la cadena truncado]&quot;;.
         /// </summary>
         internal static string index {
             get {

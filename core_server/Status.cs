@@ -8,8 +8,9 @@ using System.Threading.Tasks;
 
 namespace core_server
 {
-    class Status : Common.Status, IDatabase
+    class Status : Common.Status
     {
+
         public void Insert(object data)
         {
             throw new NotImplementedException();
